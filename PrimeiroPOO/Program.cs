@@ -6,7 +6,8 @@ namespace PrimeiroPOO
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           //Instância da classe Usuario
+           
         }
     }
 }
