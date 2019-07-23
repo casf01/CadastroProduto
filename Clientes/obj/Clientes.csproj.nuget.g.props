@@ -15,4 +15,8 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.1.0\build\netcoreapp2.1\Microsoft.NETCore.App.props" Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.1.0\build\netcoreapp2.1\Microsoft.NETCore.App.props')" />
   </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgNetOffice_Core_Net45 Condition=" '$(PkgNetOffice_Core_Net45)' == '' ">C:\Users\edilson.jcsilva\.nuget\packages\netoffice.core.net45\1.7.4.4</PkgNetOffice_Core_Net45>
+    <PkgNetOffice_Excel_Net45 Condition=" '$(PkgNetOffice_Excel_Net45)' == '' ">C:\Users\edilson.jcsilva\.nuget\packages\netoffice.excel.net45\1.7.4.4</PkgNetOffice_Excel_Net45>
+  </PropertyGroup>
 </Project>
