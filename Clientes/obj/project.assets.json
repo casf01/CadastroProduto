@@ -193,6 +193,15 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.Office.Interop.Excel/15.0.4795.1000": {
+        "type": "package",
+        "compile": {
+          "lib/net20/Microsoft.Office.Interop.Excel.dll": {}
+        },
+        "runtime": {
+          "lib/net20/Microsoft.Office.Interop.Excel.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -553,6 +562,18 @@
         "version.txt"
       ]
     },
+    "Microsoft.Office.Interop.Excel/15.0.4795.1000": {
+      "sha512": "iNGgO/2HBH9sy5AtVTvNW30NFpPBVngRqd8CN9d/LYk7KnstiOrRLPOOrJesqmdeDAUZwetCYEO8RvUxSd7UBg==",
+      "type": "package",
+      "path": "microsoft.office.interop.excel/15.0.4795.1000",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Microsoft.Office.Interop.Excel.dll",
+        "microsoft.office.interop.excel.15.0.4795.1000.nupkg.sha512",
+        "microsoft.office.interop.excel.nuspec"
+      ]
+    },
     "NETStandard.Library/2.0.3": {
       "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
@@ -684,7 +705,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Microsoft.Office.Interop.Excel >= 15.0.4795.1000"
     ]
   },
   "packageFolders": {
@@ -730,6 +752,10 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Microsoft.Office.Interop.Excel": {
+            "target": "Package",
+            "version": "[15.0.4795.1000, )"
           }
         },
         "imports": [
@@ -739,5 +765,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Office.Interop.Excel 15.0.4795.1000' foi restaurado usando '.NETFramework,Version=v4.6.1' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v2.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Office.Interop.Excel",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }
