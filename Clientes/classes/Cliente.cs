@@ -30,6 +30,11 @@ namespace Clientes.classes
             //Vamos salvar o arquivo
             ex.ActiveWorkbook.SaveAs(@"c:\edilson\cliente.xlsx");
 
+            //fechar o arquivo de excel
+            ex.Quit();
+
+            return "Cliente salvo com sucesso!";
+
         }
         public string[,] listar(){
             return null;
