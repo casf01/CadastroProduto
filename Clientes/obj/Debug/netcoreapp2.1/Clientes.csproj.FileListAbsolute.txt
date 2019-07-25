@@ -9,3 +9,14 @@ C:\Users\edilson.jcsilva\CSharp\POO\Clientes\obj\Debug\netcoreapp2.1\Clientes.As
 C:\Users\edilson.jcsilva\CSharp\POO\Clientes\obj\Debug\netcoreapp2.1\Clientes.AssemblyInfo.cs
 C:\Users\edilson.jcsilva\CSharp\POO\Clientes\obj\Debug\netcoreapp2.1\Clientes.dll
 C:\Users\edilson.jcsilva\CSharp\POO\Clientes\obj\Debug\netcoreapp2.1\Clientes.pdb
+C:\Users\caroline.afsouza\CSharp\POO\Clientes\bin\Debug\netcoreapp2.1\Clientes.deps.json
+C:\Users\caroline.afsouza\CSharp\POO\Clientes\bin\Debug\netcoreapp2.1\Clientes.runtimeconfig.json
+C:\Users\caroline.afsouza\CSharp\POO\Clientes\bin\Debug\netcoreapp2.1\Clientes.runtimeconfig.dev.json
+C:\Users\caroline.afsouza\CSharp\POO\Clientes\bin\Debug\netcoreapp2.1\Clientes.dll
+C:\Users\caroline.afsouza\CSharp\POO\Clientes\bin\Debug\netcoreapp2.1\Clientes.pdb
+C:\Users\caroline.afsouza\CSharp\POO\Clientes\obj\Debug\netcoreapp2.1\Clientes.csprojAssemblyReference.cache
+C:\Users\caroline.afsouza\CSharp\POO\Clientes\obj\Debug\netcoreapp2.1\Clientes.csproj.CoreCompileInputs.cache
+C:\Users\caroline.afsouza\CSharp\POO\Clientes\obj\Debug\netcoreapp2.1\Clientes.AssemblyInfoInputs.cache
+C:\Users\caroline.afsouza\CSharp\POO\Clientes\obj\Debug\netcoreapp2.1\Clientes.AssemblyInfo.cs
+C:\Users\caroline.afsouza\CSharp\POO\Clientes\obj\Debug\netcoreapp2.1\Clientes.dll
+C:\Users\caroline.afsouza\CSharp\POO\Clientes\obj\Debug\netcoreapp2.1\Clientes.pdb
