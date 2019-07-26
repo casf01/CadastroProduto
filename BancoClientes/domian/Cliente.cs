@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
 namespace BancoClientes.domian
@@ -81,5 +82,58 @@ namespace BancoClientes.domian
 
                  return msg;
         }
+
+
+        public List<Cliente> Listar(){
+            
+            List<Cliente> Lst = new List<Cliente>();
+
+            MySqlConnection conexao = new MySqlConnection("Server=localhost;Port=3306;Database=dbcliente; User Id=root; Password=");
+            conexao.Open();//Vamos abrir o banco de dados
+
+            MySqlCommand cmd = new MySqlCommand();
+            
+            cmd.Connection = conexao;
+
+            cmd.CommandType = System.Data.CommandType.Text;
+
+            cmd.CommandText = "Select id,nome,email,telefone,idade,datacadastro from cliente";
+
+           /*
+           Para executar e ler os dados a partir do comando select, iremos usar uma execução com o comando ExecuteReader(Executar a consulta e Lê o resultado).
+           Esse resultado será armazenado em uma variável do tipo Reader(Leitor) para suportar os dados que retornam da consulta
+            */
+
+            MySqlDataReader dr = cmd.ExecuteReader();
+
+            /*
+            Os dados retornados do comando select foram armazenados na variável dr. Com estes dados iremos popular a lista de cliente(lst)
+            criada acima. Para realizar esta operação, usaremos a estrutura de repetição while, pois não sabemos onde os dados terminam.
+            Enquanto for possível ler o conteúdo de dr continue a buscar os dados e popular a lista de clientes
+             */
+
+            while(dr.Read()){
+
+                /*
+                O método listar retorna uma lista de clientes cadastrado. Para nos ajudar no retorno foi criado uma lista do tipo cliente
+                com o nome de lst. Essa lista só aceita cliente com conteúdo. Portando foi necessário criar um objeto do tipo Cliente com
+                o nome de cli para organizar os dados vindos do dr(instância do banco de dados) e assim adicionar cli a lista de clientes
+                 */
+                 
+                Cliente cli = new Cliente();
+                cli.id = dr.GetInt32("id");
+                cli.nome = dr.GetString("nome");
+                cli.email = dr.GetString("email");
+                cli.telefone = dr.GetString("telefone");
+                cli.idade = dr.GetInt32("idade");
+                cli.datacadastro = dr.GetDateTime("datacadastro");
+                Lst.Add(cli);
+
+            }
+
+            conexao.Close();
+            return Lst;
+        }
+
     }
 }
