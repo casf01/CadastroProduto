@@ -1,0 +1,142 @@
+<html>
+    <meta charset="utf-8">
+
+    <head>
+        <title>Gerenciar Clientes</title>
+
+       <link href="https://fonts.googleapis.com/css?family=Boogaloo|Handlee|Luckiest+Guy|Rubik&display=swap" rel="stylesheet">
+
+
+        <script src="https://kit.fontawesome.com/973d36562b.js"></script>
+
+        <style>
+            /*Zerar todas as margens*/
+            *{
+                margin: 0px;/*Margem externa*/
+                padding: 0px;/*Margem interna*/
+            }
+
+            h1{
+                font-family: Boogaloo;
+                text-align: center;
+                font-size: 20pt;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                /*background-color:#CCC;*/
+                /*background-image: url("");*/
+                background-size:100%;
+                background-position: 0px -200px;
+
+            }
+            body{
+                background-image:url("");
+                background-size:100%;
+            }
+
+            #quadro{
+                background-color: rgba(255,255,255,);
+                width: 50%;
+                /*para alinhar uma caixa ao centro você deve 
+                alterar as margens direita e esquerda para auto
+                */
+                margin-right: auto;
+                margin-left: auto;
+                padding: 50px;
+
+            }
+            #link{
+                border:1px solid silver;
+                margin-bottom: 10px;
+                transition: ease .5s;
+                padding: 10px;
+            }
+           #link:hover{
+               background-color: #ddd;
+           } 
+           #link i{
+               color: darkslategrey;
+           }
+
+           a{
+               font-family: Rubik;
+               color:black;
+               margin-left: 10px;
+               padding:5px;
+               text-decoration: none;
+           }
+           a:hover{
+               color:red;
+           }
+
+            footer{
+                background-color: rgba(255,255,255, 5);
+                padding-top:20px;
+                padding-bottom: 20px;
+                text-align: center;
+                font-family: Rubik;
+                position: fixed;
+                bottom: 0px;
+                width: 100%;
+            }
+
+
+
+        </style>
+
+
+    </head>
+
+    <body>
+        
+        <header>
+            <h1>Gerenciar Clientes</h1>
+        </header>
+
+        <main>
+            <div id="quadro">
+                <div id="link">
+                    <i class="fas fa-save fa-3x"></i>
+                    @Html.ActionLink("Cadastro","Cadastro","Cliente")
+                </div>
+
+                <div id="link">
+                    <i class="fas fa-retweet fa-3x"></i>
+                    @Html.ActionLink("Atualizar","Atualizar","Cliente")
+                </div>
+
+                  <div id="link">
+                    <i class="fas fa-trash-alt fa-3x"></i>
+                    @Html.ActionLink("Apagar","Apagar","Cliente")
+                </div>
+
+                <div id="link">
+                   <i class="fas fa-list fa-3x"></i>
+                    @Html.ActionLink("Listar","Listar","Cliente")
+                </div>
+
+                <div id="link">
+                   <i class="fas fa-list-ol fa-3x"></i>
+                    @Html.ActionLink("Listar por Id","ListarId","Cliente")
+                </div>
+
+                <div id="link">
+                   <i class="fas fa-th-list fa-3x"></i>
+                    @Html.ActionLink("Listar por Nome","ListarNome","Cliente")
+                </div>
+
+
+
+            </div>
+        </main>
+
+        <footer>
+
+            <h3>© Copyright - Todos os direitos reservados - Por Caroline Souza</h3>
+
+        </footer>
+
+
+
+    </body>
+
+</html>

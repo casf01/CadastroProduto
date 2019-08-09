@@ -1,0 +1,133 @@
+<!--
+    A diretiva using foi utilizada para importar a camada Domain(dominio) com a Classe Cliente, pois essa será utilizada na contrução
+    da lista de clientes abaixo mo foreach(para cada)
+    
+    
+-->
+
+
+
+
+@using Livraria.Models.Domain;
+<html>
+    <head>
+        <title>Clientes Cadastrados</title>
+
+        
+       <link href="https://fonts.googleapis.com/css?family=Boogaloo|Handlee|Luckiest+Guy|Rubik&display=swap" rel="stylesheet">
+
+
+        <script src="https://kit.fontawesome.com/973d36562b.js"></script>
+
+
+        <style>
+            h1{
+                text-align: center;
+                font-family: Boogaloo;
+                font-size: 15pt;
+                border-bottom: 1px solid silver;
+                padding-top:20px;
+                padding-bottom: 20px;
+            }
+            table{
+                width: 60%;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            th{
+                border-bottom: 1px solid silver;
+                font-family: Boogaloo;
+                font-size:15pt;
+                padding: 5px;
+            }
+            td{
+                padding: 5px;
+                background-color:silver;
+                font-family: Rubik; 
+            }
+            tr:hover{
+                background-color: red;
+                color:white;
+                cursor:pointer;
+            }
+            footer{
+                background-color: rgba(255, 255, 255, );
+                padding-top:20px;
+                padding-bottom: 20px;
+                text-align: center;
+                font-family: Rubik;
+                position: fixed;
+                bottom: 0px;
+                width: 100%;
+            }
+            a{
+            margin:10px;
+            text-decoration: none;
+            font-family: Boogaloo;
+            font-size:15pt;
+            color:black;
+            transition: ease .5s;
+        }
+
+        a:hover{
+            margin-left: 15px;
+            color:black;
+
+
+        </style>
+
+
+
+
+
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Clientes Cadastrados</h1>
+            @Html.ActionLink("Home","Index","Cliente")
+        </header>
+        <main>
+
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>CPF</th>
+                    <th>Atualizar</th>
+                    <th>Apagar</th>
+                </tr>
+
+       
+        
+            @foreach (var item in ViewData["Lista"] as IList<Cliente>)
+            {
+                
+                <tr>
+                    <td>@item.Nome</td>
+                    <td>@item.Email</td>
+                    <td>@item.Telefone</td>
+                    <td>@item.Cpf</td>
+                    
+                    <td> <i class="fas fa-sync-alt"></i> </td>
+
+                    <td> <i class="fas fa-trash"></i> </td>
+                </tr>
+                
+            }
+
+            </table>
+
+         </main>
+
+         <footer>
+            <h3>© Copyright - Todos os direitos reservados - Por Caroline Souza</h3>
+         </footer>
+
+        
+    </body>
+
+</html>
